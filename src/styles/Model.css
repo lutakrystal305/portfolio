@@ -1,0 +1,92 @@
+.Model {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+.Model .container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Model .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Model .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Model .body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.Model .body h5 {
+    font-size: 35px;
+    color: #aaa;
+    opacity: 0.8;
+    text-shadow: 2px 3px #aaa;
+    font-weight: lighter;
+}
+.Model .body .list-model {
+    position: relative;
+    top: -200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Model .body .list-model a {
+    font-size: 20px;
+    padding: 10px 30px;
+    color: #ddd;
+    border-radius: 20px;
+}
+.Model .body .list-model a:nth-child(even):hover {
+    color: #fff;
+    background: rgb(113,112,210) !important;
+    background: linear-gradient(90deg, rgba(113,112,210,1) 0%, rgba(151,35,166,1) 45%, rgba(179,28,82,1) 100%) !important;
+}
+.Model .body .list-model a:nth-child(odd):hover {
+    color: #fff;
+    background: rgb(85,180,174) !important;
+    background: linear-gradient(90deg, rgba(85,180,174,1) 0%, rgba(151,35,166,1) 45%, rgba(55,28,179,0.8998949921765581) 100%) !important;
+}
+.Model .body .list-model a:nth-child(even) {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(35,141,166,1) 35%, rgba(0,212,255,1) 100%);
+}
+.Model .body .list-model a:nth-child(odd) {
+    background: rgb(15,43,27);
+    background: linear-gradient(90deg, rgba(15,43,27,1) 0%, rgba(35,166,116,1) 35%, rgba(162,13,203,1) 100%);
+}
+
+@media (max-width: 680px) {
+    .Model .list-model {
+        flex-direction: column;
+        align-items: center;
+        top: -150px !important;
+    }
+    .Model .list-model a {
+        margin-top: 20px;
+    }
+    .Model .body h5 {
+        margin-top: 50px;
+    }
+}

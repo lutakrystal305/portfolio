@@ -1,0 +1,71 @@
+.CheckFace {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.CheckFace .container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CheckFace .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.CheckFace .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.CheckFace .body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CheckFace .body h4 {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 27px !important;
+}
+.CheckFace .body div {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    background-color: #222;
+}
+.CheckFace .click-permiss {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    color: #FFF;
+    font-weight: bold;
+}
+.CheckFace .check {
+    color: #a22796 !important;
+    border: 1px solid #a22796;
+    padding: 10px 20px;
+    font-size: 23px;
+    font-weight: 400;
+}
+.CheckFace .check span {
+    color: #21a716 !important;
+}
+.CheckFace .click-permiss span {
+    color: #21a716 !important;
+    font-size: 30px;
+    margin-right: 20px;
+}

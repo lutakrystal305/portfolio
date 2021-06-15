@@ -1,0 +1,113 @@
+.d-Navbar {
+    position: relative;
+    background-color: rgba(255,255,255,0.05) !important;
+    border: 1px solid transparent;
+    height: 10vh !important;
+    z-index: 100;
+}
+.bg-light, .navbar, .navbar-expand-md, .navbar-light {
+    background-color: rgba(0,0,0,0.3) !important;
+}
+.d-Navbar li:hover {
+    color: #54DE27;
+}
+button {
+    color: #54DE27;
+    background-color: transparent;
+    border: none;
+}
+button:hover {
+    border: 2px solid #54DE27; 
+}
+.logo-icon {
+    margin-right: 10px;
+}
+.Top {
+    margin-left: 50px;
+}
+.navbar-brand {
+    padding-left: 30px;
+    color: rgba(39,81,31, 1) !important;
+    font-weight: bold;
+    font-style: italic;
+}
+.Linkz {
+    color: rgba(67, 82, 65, 0.6) !important;
+    font-weight: bold !important;
+}
+.Linkz:hover {
+    text-decoration: none;
+    color: #a3176b;
+}
+.d-Navbar .Top:hover {
+    color: #a3176b;
+}
+.user {
+    display: flex;
+    justify-content: center;
+}
+.avt {
+    border-radius: 5000px;
+    border: 1px solid #AAA;
+    margin-right: 10px;
+}
+.user p {
+    position: relative;
+    top: 6px;
+    font-weight: bold;
+    color: #54DE27;
+    text-align: center;
+}
+.avt-user {
+    height: 40px;
+    border-radius: 500px;
+    border: 1px solid #BBB;
+}
+.avt-none-user {
+    width: 40px;
+    height: 40px;
+}
+.Link-user div, .Link-user {
+    display: flex;
+}
+.Link-user h6 {
+    position: relative;
+    top: 10px;
+    color: #54DE27;
+    margin-left: 10px;
+}
+.Link-user:hover {
+    text-decoration: none;
+    background-color: #444;
+}
+.Link-nav {
+    color: rgb(136, 122, 122);
+    font-weight: bold;
+}
+.Link-item {
+    border-bottom: 1px solid #444 !important;
+}
+.Link-item:hover {
+    background-color: #444 !important;
+}
+.Link-nav:hover {
+    text-decoration: none;
+    color: #DDD;
+}
+.MuiPaper-root {
+    background-color: #222 !important;
+}
+.MuiDivider-root {
+    background-color: rgba(255,255,255,0.12) !important;
+}
+.Link-Mobile {
+    display:none !important;
+}
+.avt-none-user {
+    background-color: #54DE27;
+}
+@media (max-width:680px) {
+    .Link-Mobile {
+        display: flex !important;
+    }
+}

@@ -1,24 +1,56 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Portfolio from './components/Route/Portfolio';
+import Topbar from './components/Navbar';
+import Home from './components/Route/Home';
+import Model from './components/Model/Model';
+import CheckFace from './components/Route/CheckFace';
+import PrivateRoute from './components/Route/PrivateRoute';
+import Coco from './components/Model/CoCo';
+import FaceMesh from './components/Model/FaceMesh';
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 
 function App() {
+  const authed = useSelector(state => state.checkLogged);
+  const key =  authed.isAuthed || sessionStorage.getItem('key');
+  console.log(key);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Topbar />
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <PrivateRoute exact path="/model">
+              <Model />
+          </PrivateRoute>
+          <PrivateRoute exact path="/model/cocossd">
+              <Coco />
+          </PrivateRoute>
+          <PrivateRoute exact path="/model/facemesh">
+              <FaceMesh />
+          </PrivateRoute>
+          <PrivateRoute path="/creator">
+            <Portfolio />
+          </PrivateRoute>
+          <Route path="/">
+            {key ?
+            <Home />
+            :<CheckFace />
+            }
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
