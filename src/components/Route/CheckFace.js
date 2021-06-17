@@ -104,6 +104,7 @@ const CheckFace = () => {
                         }}
                         />}
                         <canvas
+                        className='canvas1'
                         ref={canvasRef}
                         style={{
                             position: "absolute",

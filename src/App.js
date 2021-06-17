@@ -8,6 +8,7 @@ import CheckFace from './components/Route/CheckFace';
 import PrivateRoute from './components/Route/PrivateRoute';
 import Coco from './components/Model/CoCo';
 import FaceMesh from './components/Model/FaceMesh';
+import PredictAge from './components/Model/PredictAge';
 
 
 import {
@@ -38,6 +39,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/model/facemesh">
               <FaceMesh />
+          </PrivateRoute>
+          <PrivateRoute exact path="/model/predictAge">
+              <PredictAge />
           </PrivateRoute>
           <PrivateRoute path="/creator">
             <Portfolio />

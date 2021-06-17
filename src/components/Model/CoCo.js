@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../styles/CoCo.css';
+import '../../styles/CheckFace.css';
 import Webcam from 'react-webcam';
 import { drawRect, drawRect1 } from '../../utils/drawRect';
 import * as cocossd from '@tensorflow-models/coco-ssd';
@@ -207,7 +208,7 @@ const Coco = () => {
                         <button onClick={() => setCheck('file')}>Upload File</button>
                     </div>
                 </div>
-                {check === 'webcam' && <div>
+                {check === 'webcam' && <div className='webcam-wrap'>
                     <Webcam
                     mirrored ={true}
                     ref={webcamRef}
@@ -225,6 +226,7 @@ const Coco = () => {
                     }}
                     />
                     <canvas
+                    className='canvas1'
                     ref={canvasRef}
                     style={{
                         position: "absolute",

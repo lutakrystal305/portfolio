@@ -4,6 +4,7 @@ import * as facemesh from "@tensorflow-models/face-landmarks-detection";
 import Webcam from "react-webcam";
 import { drawMesh } from '../../utils/drawFaceMark';
 import '../../styles/FaceMesh.css';
+import '../../styles/CheckFace.css';
 import frame1 from '../../img/frame9.png';
 import frame2 from '../../img/frame4.png';
 
@@ -87,6 +88,7 @@ const FaceMesh = () => {
                     />
 
                     <canvas
+                    className='canvas1'
                     ref={canvasRef}
                     style={{
                         position: "absolute",

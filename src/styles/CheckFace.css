@@ -69,3 +69,13 @@
     font-size: 30px;
     margin-right: 20px;
 }
+@media (max-width: 680px) {
+    .CheckFace video, .Coco .webcam-wrap video, .FaceMesh video {
+        width: 400px !important;
+        height: 500px !important;
+    }
+    .canvas1 {
+        width: 400px !important;
+        height: 500px !important;
+    }
+}
