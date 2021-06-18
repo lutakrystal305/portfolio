@@ -1,0 +1,78 @@
+
+@media (max-width: 680px) {
+    .tfjs-visor-container, .visor {
+        display: none !important;
+    }
+    .PredictAge .predict {
+        width: 50% !important;
+    }
+}
+.PredictAge {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.PredictAge1 {
+    height: 140% !important;
+}
+.PredictAge .container {
+    width: 100%;
+    height: 100%;
+}
+.PredictAge .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222;
+}
+.PredictAge .frame1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    max-width: 100%;
+}
+.PredictAge .frame1 img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.PredictAge .contain1, .PredictAge .contain2 {
+    position: relative;
+    top: 150px;
+}
+.PredictAge .predict {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    background: #159957;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.PredictAge .predict p {
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.PredictAge .predict h5 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #c98eee;
+}

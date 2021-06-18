@@ -5,6 +5,7 @@ import Webcam from 'react-webcam';
 import { drawRect, drawRect1 } from '../../utils/drawRect';
 import * as cocossd from '@tensorflow-models/coco-ssd';
 import * as tf from '@tensorflow/tfjs';
+import classNames from 'classnames';
 import { Player } from 'video-react';
 import pic1 from '../../img/frame2.png';
 import pic2 from '../../img/frame7.png';
@@ -189,19 +190,19 @@ const Coco = () => {
         }
     }, [check])
     return(
-        <div className='Coco'>
-            
-            <div>
+        <div className={classNames('Coco', {'Coco1': check.length !== 0})}>
+            <div className='background'></div>
+            <div className='contain'>
                 <div className='frame1'><img src={frame1} alt='frame1' /></div>
                 <div className='frame2'><img src={frame2} alt='frame2' /></div>
                 {check !== '' && <div className='frame3'><img src={frame3} alt='frame3' /></div>}
-                <div>
+                <div className='contain1'>
                     <h3>CocoSSD object detection (80 label):</h3>
                     {check.length === 0 && <p>Wait a second to inital Model AI</p>}
                     {check === 'webcam' && <p>Wait a second to inital Webcam!!</p> }
                     {check === 'file' && <p>Wait a second to process</p>}
                 </div>
-                <div>
+                <div className='contain2'>
                     <h6>Choose</h6>
                     <div>
                         <button onClick={() => setCheck('webcam')}>Webcam</button>
@@ -243,7 +244,7 @@ const Coco = () => {
                     />
                 </div>
                 }
-                {check === 'file' && <div>
+                {check === 'file' && <div className='input-wrap'>
                     <div>
                         <input type='file' onChange={handleChange} ref={fileInputRef}  />
                         <div className='frame'>

@@ -16,6 +16,7 @@
     "@tensorflow-models/face-landmarks-detection": "0.0.3",
     "@tensorflow-models/facemesh": "0.0.5",
     "@tensorflow/tfjs": "^3.7.0",
+    "@tensorflow/tfjs-vis": "^1.5.1",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",

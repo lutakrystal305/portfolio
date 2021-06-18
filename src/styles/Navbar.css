@@ -27,13 +27,14 @@ button:hover {
 }
 .navbar-brand {
     padding-left: 30px;
-    color: rgba(39,81,31, 1) !important;
+    color: rgba(61,246,25, 1) !important;
     font-weight: bold;
     font-style: italic;
 }
 .Linkz {
-    color: rgba(67, 82, 65, 0.6) !important;
+    color: #bbb !important;
     font-weight: bold !important;
+    z-index: 2;
 }
 .Linkz:hover {
     text-decoration: none;

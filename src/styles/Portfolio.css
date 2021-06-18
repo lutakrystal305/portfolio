@@ -13,15 +13,17 @@ a {
 }
 
 .Portfolio {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #eee;
 }
 .Portfolio .background {
-    background-color: #26262d !important;
+    background-color: #222 !important;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +36,7 @@ a {
 .Portfolio .container{
     margin: 8vh 6vw;
     position: relative;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 100%;
     height: 84vh;
@@ -78,7 +80,7 @@ a {
     align-items: center;
     height: auto;
     text-align: center;
-    color: #323232;
+    color: #ddd;
     font-size: 14px !important;
     font-weight: 500;
     text-transform: uppercase;
@@ -626,6 +628,20 @@ a {
     color: #aaa !important;
 }
 @media (max-width: 680px) {
+    .Portfolio {
+        height: 100% !important;
+        
+    }
+    .background {
+        height: 810% !important;
+    }
+    .map iframe{
+        width: 300px !important;
+    }
+    
+    .card, .card-infor {
+        top: 100px !important;
+    }
     .header {
         margin-right: 0;
         margin-left: 0;
@@ -633,7 +649,7 @@ a {
         position: absolute;
         left: 0;
         right: 0;
-        top: -70px;
+        top: 0;
         width: auto;
         height: 64px;
         max-width: 100%;

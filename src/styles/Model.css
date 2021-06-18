@@ -40,9 +40,9 @@
 }
 .Model .body h5 {
     font-size: 35px;
-    color: #aaa;
+    color: #ccc;
     opacity: 0.8;
-    text-shadow: 2px 3px #aaa;
+    text-shadow: 2px 1px #aaa;
     font-weight: lighter;
 }
 .Model .body .list-model {

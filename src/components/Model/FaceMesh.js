@@ -7,6 +7,7 @@ import '../../styles/FaceMesh.css';
 import '../../styles/CheckFace.css';
 import frame1 from '../../img/frame9.png';
 import frame2 from '../../img/frame4.png';
+import bg from '../../img/bg24.jpg';
 
 const FaceMesh = () => {
     const webcamRef = useRef(null);
@@ -62,14 +63,15 @@ const FaceMesh = () => {
     return(
         <div className='FaceMesh'>
             <div>
+                <div className='background'><img src={bg} alt='bg' /></div>
                 <div className='frame1'><img src={frame1} alt='frame1' /></div>
                 <div className='frame2'><img src={frame2} alt='frame2' /></div>
-                <div>
+                <div className='contain'>
                     <h3>Face landmark detection :</h3>
                     <p>Wait a second to inital Model AI</p>
                     
                 </div>
-                <div>
+                <div className='contain1'>
                     <Webcam
                     mirrored={true}
                     ref={webcamRef}

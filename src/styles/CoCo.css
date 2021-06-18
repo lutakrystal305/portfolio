@@ -1,7 +1,37 @@
 .Coco {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
+    color: #fff;
+}
+.Coco1 {
+    height: 115% !important;
+}
+.Coco .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222;
+}
+.Coco .contain {
+    height: 100%;
+}
+.Coco .contain .contain1 {
+    position: relative;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Coco .contain .contain2 {
+    position: relative;
+    top: 150px;
 }
 .Coco .frame {
     overflow: hidden;
@@ -10,6 +40,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.Coco .webcam-wrap, .input-wrap {
+    position: relative;
+    top: 150px;
 }
 .Coco .video-react-video {
     position: absolute !important;
