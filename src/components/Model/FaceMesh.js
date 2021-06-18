@@ -7,7 +7,7 @@ import '../../styles/FaceMesh.css';
 import '../../styles/CheckFace.css';
 import frame1 from '../../img/frame9.png';
 import frame2 from '../../img/frame4.png';
-import bg from '../../img/bg24.jpg';
+import bg from '../../img/bg24.png';
 
 const FaceMesh = () => {
     const webcamRef = useRef(null);

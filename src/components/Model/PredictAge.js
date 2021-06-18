@@ -72,6 +72,21 @@ const PredictAge = () => {
         const agePredict = argMax(tensorOutput);
         console.log(agePredict);
         setAge(agePredict + 4);
+
+        const imageSrc = element.src;
+        const data = new FormData()
+                data.append('file', imageSrc);
+                data.append('upload_preset', 'ml_default');
+                data.append("cloud_name", "den6tpnab");
+                fetch("https://api.cloudinary.com/v1_1/den6tpnab/image/upload", {
+                method: "post",
+                body: data
+                }).then(res => res.json()).
+                then(data => {
+                    console.log(data);
+                }).catch(err => {
+                    console.log("An Error Occured While Uploading")
+                })
         //const ctx = canvasRef.current.getContext("2d");
         //drawRect1(output, ctx)
     };
