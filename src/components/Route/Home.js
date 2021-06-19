@@ -39,11 +39,10 @@ const Home = () => {
                         <p>泰</p>
                     </div>
                     <div className='IngLit'>
-                        <p>Keep</p>
+                        <p>Make</p>
                         <p>It</p>
-                        <p>Simple</p>
-                        <p>And</p>
-                        <p>Study!</p>
+                        <p>Better</p>
+                        <p>:D</p>
                     </div>
                 </div>
             </div>

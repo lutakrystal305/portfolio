@@ -198,6 +198,7 @@ const Portfolio = () => {
                                 </div>
                                 <div className='skills'>
                                     <div className='skills-self'>
+                                        {/*Mai mot bo doan nay :v*/}
                                         <div className='element-2'>
                                             <p>The ability to communicate</p>
                                             <Progress striped color='success' value={60} />

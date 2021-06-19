@@ -461,6 +461,7 @@ a {
 .content-skill .head p {
     margin-right: 10px;
     margin-left: 20px;
+    margin-bottom: 0px !important;
 }
 .content-skill .skills {
     position: relative;
