@@ -357,18 +357,21 @@ a {
 }
 .intro-wrap div:nth-child(odd) span {
     color: #a8127d;
+    font-size: 15px;
 }
 .intro-wrap div:nth-child(even) span {
     color: #18a6d7;
+    font-size: 15px;
 }
 .introduce .kiss {
-    color: #b5af6d;
+    color: #6ee92f;
     font-size: 17px;
     font-style: italic;
     width: 100%;
 }
 .intro-wrap div p {
-    margin-left: 20px;
+    margin-left: 10px;
+    font-size: 14px;
     color: #ccc;
 }
 .award {
@@ -395,10 +398,10 @@ a {
     border-right: 1px solid #bbb;
 }
 .experience .head, .education .head {
-    margin-left: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 70px;
     text-transform: uppercase;
     font-size: 18px;
@@ -408,6 +411,7 @@ a {
 }
 .experience .head p, .education .head p {
     margin-left: 10px;
+    margin-bottom: 0px !important;
 }
 .element-1 {
     border-bottom: 1px solid #aaa;
@@ -415,6 +419,7 @@ a {
     padding: 5px;
 }
 .element-1 .time-series {
+    margin-top: 10px;
     display: inline-block;
     padding: 5px;
     border: 1px solid #2aec12;
@@ -428,7 +433,7 @@ a {
     color: #fff; 
 }
 .element-1 .caption {
-    font-size: 15px;
+    font-size: 14px;
     font-style: italic;
     color: #bbb;
 }
@@ -625,15 +630,15 @@ a {
 }
 .contact-wrap p {
     margin-right: 20px;
-    color: #aaa !important;
+    color: #058d94 !important;
 }
 @media (max-width: 680px) {
     .Portfolio {
         height: 100% !important;
         
     }
-    .Portfolio.background {
-        height: 810% !important;
+    .Portfolio .background {
+        height: 820% !important;
     }
     .map iframe{
         width: 300px !important;
@@ -669,6 +674,14 @@ a {
     .hireme {
         height: 40px !important;
     }
+    
+    .Portfolio .phoneNumber, .Portfolio .address {
+        grid-column: 1 / 3;
+        justify-content: unset !important;
+    }
+    .Portfolio .phoneNumber p, .Portfolio .address p {
+        margin-left: 20px;
+    }
 }
 @media (max-width: 1120px) {
     .card {
@@ -691,6 +704,7 @@ a {
         visibility: visible;
         animation-fill-mode: none;
     }
+    
     .experience .head, .education .head {
         margin-left: 10px;
     }

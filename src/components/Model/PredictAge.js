@@ -61,7 +61,10 @@ const PredictAge = () => {
         // });
         // NEW MODEL
         const net = await tf.loadLayersModel('/tfjs4/model.json');
-        if (net) { setCheck(true)};
+        if (net) {
+            console.log('kakakaa')
+            setCheck(true)
+        };
         tfvis.show.modelSummary({name: 'Model Summary'}, net);
         console.log(net)
         //const imageData = await readImage(value);

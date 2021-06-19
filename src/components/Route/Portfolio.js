@@ -111,8 +111,7 @@ const Portfolio = () => {
                                 Biography
                             </div>
                             <div className='introduce'>
-                                <p>I'm Thai. Now, i am studying at Da Nang University of Technology,
-                                     but my major is Food Technology instead of IT.1 year ago, I have started learning about Software. I'm interested in learning more and improve myself. I always wanna be better.</p>
+                                <p>My name is Thai. I'm currently an undergraduate at The University of Danang - University of Science and Technology. My major is Food Technology but I have a passion for Information Technology. I started learning Software and coding a year ago. I would describe myself as a self-driven individual that I pride myself on my ability to constantly learn and improve knowledge and skills.</p>
                                      <span className='kiss'>Keep it simple and study!!!</span>
                                 <div className='intro-wrap'>
                                     <div>
@@ -123,11 +122,11 @@ const Portfolio = () => {
                                         <span>Resident:</span>
                                         <p>Viet Nam</p>
                                     </div>
-                                    <div>
+                                    <div className='phoneNumber'>
                                         <span>Phone Number: </span>
                                         <p>0764323005</p>
                                     </div>
-                                    <div>
+                                    <div className='address'>
                                         <span>Adress:</span>
                                         <p>Quang Nam, Viet Nam</p>
                                     </div>
@@ -162,12 +161,12 @@ const Portfolio = () => {
                                     <div className='element-1'>
                                         <p className='time-series'>11/2020-12/2020</p>
                                         <p className='product'>Web Message</p>
-                                        <p className='caption'>it's web that was written by nodejs and socketio."https://kmess.herokuapp.com", you can visit it to know more!</p>
+                                        <p className='caption'>it's web that was written by nodejs and socketio.You can visit it to know more, <span style={{fontSize: 10}}>"https://kmess.herokuapp.com"</span>!</p>
                                     </div>
                                     <div className='element-1'>
                                         <p className='time-series'>9/2020-10/2020</p>
                                         <p className='product'>Ecomerce web</p>
-                                        <p className='caption'>It's my first web that i completely created! "https://lutakrystal305.herokuapp.com", you can visit it to know more!</p>
+                                        <p className='caption'>It's my first web that i completely created. You can visit it to know more, <span style={{fontSize:10}}>"https://lutakrystal305.herokuapp.com"</span>!</p>
                                     </div>
                                 </div>
                                 <div className='education'>
