@@ -4,7 +4,13 @@
         display: none !important;
     }
     .PredictAge .predict {
-        width: 50% !important;
+        width: 70% !important;
+    }
+    .PredictAge1 {
+        height: 150% !important;
+    };
+    .PredictAge .background {
+        height: auto !important;
     }
 }
 .PredictAge {
@@ -15,7 +21,7 @@
     color: #fff;
 }
 .PredictAge1 {
-    height: 140% !important;
+    height: 150%;
 }
 .PredictAge .container {
     width: 100%;
@@ -49,7 +55,16 @@
 }
 .PredictAge .contain1, .PredictAge .contain2 {
     position: relative;
-    top: 150px;
+    top: 100px;
+}
+.PredictAge .contain1 p {
+    color: #39eee5;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 18px;
+}
+.predictAge1 .contain1 p {
+    color: ##bbf019 !important;
 }
 .PredictAge .predict {
     width: 20%;
@@ -68,7 +83,7 @@
 .PredictAge .predict p {
     color: #fff;
     font-style: italic;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: lighter;
 }
 .PredictAge .predict h5 {

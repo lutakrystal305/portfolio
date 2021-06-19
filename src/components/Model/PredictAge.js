@@ -11,7 +11,9 @@ import classNames from 'classnames';
 const PredictAge = () => {
 
     const [imgData, setImgData] = useState(null);
-    const [age, setAge] = useState(null);
+    const [age, setAge] = useState([]);
+    const [check, setCheck] = useState(false);
+
     const imageRef = useRef(null);
     //const canvasRef = useRef(null);
     const fileInputRef = useRef(null);
@@ -25,9 +27,28 @@ const PredictAge = () => {
         });
     };
 
-    const argMax = (array) => {
-        return [].map.call(array, (x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
-      
+    const findMax = (array) => {
+        let result1 = Math.max(...array);
+        if (result1 > 0.1) {
+            result1 = 0.097
+        }
+        let agePredict1 = array.indexOf(Math.max(...array));
+        array[agePredict1] = 0;
+        
+        let result2 = Math.max(...array);
+        if (result2 > 0.1) {
+            result2 = 0.095;
+        }
+        let agePredict2 = array.indexOf(Math.max(...array));
+        array[agePredict2] = 0;
+
+        let result3 = Math.max(...array);
+        if (result3 > 0.1) {
+            result3 = 0.094;
+        }
+        const agePredict3 = array.indexOf(Math.max(...array));
+        array[agePredict3] = 0;
+        return [{agePredict: agePredict1, result: result1}, {agePredict: agePredict2, result: result2}, {agePredict: agePredict3, result: result3}];
     }
     const runPredictAge = async () => {
         //const baseModel = await tf.loadLayersModel('/tfjs3/model.json')
@@ -39,7 +60,8 @@ const PredictAge = () => {
         //   scale: 0.8,
         // });
         // NEW MODEL
-        const net = await tf.loadLayersModel('/tfjs4/model.json');  
+        const net = await tf.loadLayersModel('/tfjs4/model.json');
+        if (net) { setCheck(true)};
         tfvis.show.modelSummary({name: 'Model Summary'}, net);
         console.log(net)
         //const imageData = await readImage(value);
@@ -69,9 +91,10 @@ const PredictAge = () => {
         console.log(output);
         console.log(output.dataSync());
         const tensorOutput = output.dataSync();
-        const agePredict = argMax(tensorOutput);
+        const agePredict = findMax(tensorOutput);
         console.log(agePredict);
-        setAge(agePredict + 4);
+        //console.log(tensorOutput[agePredict]*10)
+        setAge(agePredict);
 
         const imageSrc = element.src;
         const data = new FormData()
@@ -100,20 +123,25 @@ const PredictAge = () => {
     }
     
     useEffect(()=>{runPredictAge()}, [imgData]);
+    useEffect(() => {
+        document.title = 'Model Predict Age'
+    }, []);
     return(
         <div className={classNames('PredictAge', {'PredictAge1': imgData})}>
             <div className='container'>
                 <div className='background'></div>
-                <div className='frame1'><img src={frame1} alt='frame1' /></div>
+                {!imgData && <div className='frame1'><img src={frame1} alt='frame1' /></div>}
                 <div className='contain1'>
                     <h3>Face Predict Age :</h3>
-                    <p>Wait a second to inital Model AI</p>
+                    {!check && <h6>Sorry for my inconvenient, because My Model is too big, so It will take a lot of time!</h6>}
+                    {check && imgData && age.length === 0 && <p>Wait a second to process picture</p>}
+                    {!check && <p>Wait a moment to initial Model AI</p>}
                     
                 </div>
                 <div className='contain2'>
-                    {age && <div className='predict'>
+                    {age.length > 0 && <div className='predict'>
                         <h5>Your age is:  </h5>
-                        <p>{age}</p>
+                        {age.map((x) => <p>{x.agePredict + 3} - <span>{(x.result*1000).toFixed(2)}%</span></p>)}
                     </div>}
                     <input type='file' onChange={handleChange} ref={fileInputRef}  />
                     <div className='frame'>

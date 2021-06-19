@@ -37,7 +37,8 @@
     align-items: center;
 }
 .CheckFace .body h4 {
-    margin-bottom: 50px;
+    color: #bbb;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 27px !important;
 }
@@ -45,6 +46,7 @@
     position: relative;
     width: 640px;
     height: 480px;
+    max-width: 100%;
     background-color: #222;
 }
 .CheckFace .click-permiss {
@@ -74,8 +76,5 @@
         width: 400px !important;
         height: 500px !important;
     }
-    .canvas1 {
-        width: 400px !important;
-        height: 500px !important;
-    }
+    
 }

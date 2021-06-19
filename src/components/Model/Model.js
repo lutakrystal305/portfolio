@@ -4,6 +4,9 @@ import '../../styles/Model.css';
 
 const Model = () => {
 
+    useEffect(() => {
+        document.title = 'Model'
+    }, []);
     return(
         <div className='Model'>
             <div className='container'>

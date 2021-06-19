@@ -188,7 +188,10 @@ const Coco = () => {
         } else if (check === 'webcam') {
             setFrame1(pic1);
         }
-    }, [check])
+    }, [check]);
+    useEffect(() => {
+        document.title = 'Model Object Detection'
+    }, []);
     return(
         <div className={classNames('Coco', {'Coco1': check.length !== 0})}>
             <div className='background'></div>

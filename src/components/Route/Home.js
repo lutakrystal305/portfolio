@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/Home.css';
 import bg from '../../img/bg7.jpg'
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
+    useEffect(() => {
+        document.title = 'Home'
+    }, []);
     return(
         <div className='Home'>
             <div className='container'>

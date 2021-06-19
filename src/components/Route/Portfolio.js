@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/Portfolio.css';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +17,9 @@ import football from '../../img/6.jpg';
 
 const Portfolio = () => {
     const [check, setCheck] = useState(1);
+    useEffect(() => {
+        document.title = 'Luta Krystal'
+    }, []);
     return(
         <div className='Portfolio'>
             <div className='background'></div>

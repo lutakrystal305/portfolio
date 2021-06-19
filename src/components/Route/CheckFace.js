@@ -76,6 +76,9 @@ const CheckFace = () => {
         }
     }
     useEffect(()=>{runBlazeFace()}, []);
+    useEffect(() => {
+        document.title = 'Home(unlogged)'
+    }, []);
     return(
         <div className='CheckFace'>
             <div className='container'>
@@ -83,9 +86,10 @@ const CheckFace = () => {
                     <img src={bg} alt='background' />
                 </div>
                 <div className='body'>
-                    {checkRobot && <p className='check'><span ><FontAwesomeIcon icon={faCheckCircle} /> </span> Bạn chính là người!</p>}
-                    <p className='click-permiss'> <span><FontAwesomeIcon icon={faHandPointer} /></span>Allow access Camera to handle Robot!</p>
                     <h4>Are you Human??</h4>
+                    {checkRobot && <p className='check'><span ><FontAwesomeIcon icon={faCheckCircle} /> </span> Bạn chính là người!</p>}
+                    {!webcamRef && <p className='click-permiss'> <span><FontAwesomeIcon icon={faHandPointer} /></span>Allow access Camera to handle Robot!</p>}
+                    
                     <div>
                         {!checkCtx && <Webcam
                         //mirrored ={true}

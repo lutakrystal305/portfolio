@@ -60,6 +60,9 @@ const FaceMesh = () => {
     };
     
     useEffect(()=>{runFacemesh()}, []);
+    useEffect(() => {
+        document.title = 'Model Face landmark'
+    }, []);
     return(
         <div className='FaceMesh'>
             <div>
