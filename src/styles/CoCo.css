@@ -45,6 +45,9 @@
     position: relative;
     top: 150px;
 }
+.Coco .video-react {
+    padding-top: 0% !important;
+}
 .Coco .video-react-video {
     position: absolute !important;
     margin-left : auto !important;
@@ -113,6 +116,12 @@
     height: 100%;
     object-fit: contain;
 }
+.Coco .background1 {
+    height: 115%;
+}
+.Coco .background2 {
+    height: 130% !important;
+}
 @media(max-width: 680px) {
     .Coco .frame2, .Coco .frame3 {
         display: none !important;
@@ -120,4 +129,5 @@
     .Coco .frame1 {
         opacity: 0.5;
     }
+    
 }

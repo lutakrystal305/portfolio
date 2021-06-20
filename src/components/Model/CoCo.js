@@ -194,7 +194,7 @@ const Coco = () => {
     }, []);
     return(
         <div className={classNames('Coco', {'Coco1': check.length !== 0})}>
-            <div className='background'></div>
+            <div className={classNames('background', {'background1': imgData}, {'background2': vidData})}></div>
             <div className='contain'>
                 <div className='frame1'><img src={frame1} alt='frame1' /></div>
                 <div className='frame2'><img src={frame2} alt='frame2' /></div>
@@ -262,8 +262,23 @@ const Coco = () => {
                                     zindex: 9,
                                     width: 480,
                                     height: 640,
+                                    maxWidth: '100%'
                                 }}
                             />}
+                            {imgData && <canvas ref={canvasRef} 
+                                style={{
+                                    position: "absolute",
+                                    marginLeft: "auto",
+                                    marginRight: "auto",
+                                    left: 0,
+                                    right: 0,
+                                    textAlign: "center",
+                                    zindex: 9,
+                                    width: 480,
+                                    height: 640,
+                                    maxWidth: '100%'
+                                }}
+                            /> }
                             {vidData && <Player
                             playsInline
                             src={vidData}
@@ -283,19 +298,7 @@ const Coco = () => {
                                     maxWidth: '100%'
                                 }}
                             /> }
-                            {imgData && <canvas ref={canvasRef} 
-                                style={{
-                                    position: "absolute",
-                                    marginLeft: "auto",
-                                    marginRight: "auto",
-                                    left: 0,
-                                    right: 0,
-                                    textAlign: "center",
-                                    zindex: 9,
-                                    width: 480,
-                                    height: 640,
-                                }}
-                            /> }
+                            
                         </div>
                     </div>
                 </div>}
